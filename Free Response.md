@@ -3,6 +3,7 @@
 ## AP® Computer Science Principles Written Response Prompts
 
 ### Instructions:
+
 - **Time:** 1 hour
 - **Questions:** 2
 - Read each question carefully and completely.
@@ -10,18 +11,73 @@
 - You may plan your answers in this orange booklet, but no credit will be given for anything written in this booklet. You will only earn credit for what you write in the separate Written Response booklet.
 
 ---
+
 ### Pre-FRQ Practice
 
-## Identify the Algorithm present in the JavaScript Files. 
+## Identify the Algorithm present in the JavaScript Files.
+
+```JavaScript
+///Evan
+  function removeToDo() {
+    const specificCard = this.parentElement; //Sequencing by defining variables
+    const specificCardText =
+      specificCard.querySelector(".to-do-card").textContent;
+
+    for (let i = 0; i < ToDoItems.length; i++) { /// Iteration
+      if (ToDoItems[i] === specificCardText) { /// Selection
+        ToDoItems.splice(i, 1);
+        break;
+      }
+    }
+    specificCard.remove();
+  }
+///Gabe
+     function final(array){
+        let a = 0  ///Sequencing
+        let b = 0
+        for (let i = 0; i < array.length; i++){  ///Iteration
+         if (array[i].includes("Correct")) {a++}  ///Selection
+         if (array[i].includes("Incorrect")) {b++}}
+         clear()
+         const correct = a * 100/DOMSelectors.input.value
+         const incorrect = b * 100/DOMSelectors.input.value
+         DOMSelectors.question.insertAdjacentHTML("beforeend", `<h1>You got ${correct}% of them right and ${incorrect}% of them wrong!</h1>`)
+        }
+```
+
 ### Aspects of Algorithm
+
 Sequencing
-Selection 
+Selection
 Iteration
 
-
-
 ### Question 1
+
 Programs accept input to achieve their intended functionality. **Describe at least one valid input to your program and what your program does with that input.**
+
+```JavaScript
+//Evan
+  const removeButton = document.querySelectorAll(".remove-button");
+  removeButton.forEach((button) => {
+    button.addEventListener("click", removeToDo);
+  });
+
+  function removeToDo() {
+    const specificCard = this.parentElement;
+    const specificCardText =
+      specificCard.querySelector(".to-do-card").textContent;
+
+    for (let i = 0; i < ToDoItems.length; i++) {
+      if (ToDoItems[i] === specificCardText) {
+        ToDoItems.splice(i, 1);
+        break;
+      }
+    }
+    specificCard.remove();
+  }
+```
+
+This function awaits for users to interact by clicking the remove button, which will then run the function removeToDo.
 
 - Write your responses to this question only on the designated pages in the separate Written Response booklet.
 - If there are multiple parts to this question, write the part letter with your response.
@@ -29,18 +85,24 @@ Programs accept input to achieve their intended functionality. **Describe at lea
 ---
 
 ### Question 2
+
 Refer to your Personalized Project Reference when answering this question.
 
 #### Part (a):
+
 Consider the first iteration statement included in the Procedure section of your Personalized Project Reference. **Describe what is being accomplished by the code in the body of the iteration statement.**
 
 #### Part (b):
+
 Consider the procedure identified in part (i) of the Procedure section of your Personalized Project Reference.
+
 - Write two calls to your procedure that each cause a different code segment in the procedure to execute.
 - Describe the expected behavior of each call. If it is not possible for two calls to your procedure to cause different code segments to execute, explain why this is the case for your procedure.
 
 #### Part (c):
+
 Suppose another programmer provides you with a procedure called `checkValidity(value)` that:
+
 - Returns `true` if a value passed as an argument is considered valid by the other programmer.
 - Returns `false` otherwise.
 
@@ -53,3 +115,6 @@ Using the list identified in the List section of your Personalized Project Refer
 
 ### End of Exam
 
+```
+
+```
